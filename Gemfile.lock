@@ -58,8 +58,16 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    diff-lcs (1.5.0)
     erubis (2.7.0)
     execjs (2.8.1)
+    factory_girl (4.9.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.9.0)
+      factory_girl (~> 4.9.0)
+      railties (>= 3.0.0)
+    faker (2.16.0)
+      i18n (>= 1.6, < 2)
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -125,6 +133,23 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rspec-core (3.9.3)
+      rspec-support (~> 3.9.3)
+    rspec-expectations (3.9.4)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-mocks (3.9.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-rails (3.9.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.9.0)
+      rspec-expectations (~> 3.9.0)
+      rspec-mocks (~> 3.9.0)
+      rspec-support (~> 3.9.0)
+    rspec-support (3.9.4)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -175,12 +200,15 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  factory_girl_rails
+  faker
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
   mysql2 (>= 0.3.18, < 0.6.0)
   puma (~> 3.0)
   rails (~> 5.0.7, >= 5.0.7.2)
+  rspec-rails
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
