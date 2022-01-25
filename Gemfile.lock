@@ -41,6 +41,7 @@ GEM
     arel (7.1.4)
     bcrypt (3.1.16)
     bindex (0.8.1)
+    bson (4.14.0)
     builder (3.2.4)
     byebug (11.1.3)
     coffee-rails (4.2.2)
@@ -92,6 +93,21 @@ GEM
     mini_mime (1.1.2)
     mini_portile2 (2.6.1)
     minitest (5.15.0)
+    mongo (2.17.0)
+      bson (>= 4.8.2, < 5.0.0)
+    mongoid (6.1.1)
+      activemodel (~> 5.0)
+      mongo (>= 2.4.1, < 3.0.0)
+    mongoid-compatibility (0.5.1)
+      activesupport
+      mongoid (>= 2.0)
+    mongoid-rspec (4.1.0)
+      activesupport (>= 3.0.0)
+      mongoid (>= 3.1)
+      mongoid-compatibility (>= 0.5.1)
+      rspec-core (~> 3.3)
+      rspec-expectations (~> 3.3)
+      rspec-mocks (~> 3.3)
     mysql2 (0.4.10)
     nio4r (2.5.8)
     nokogiri (1.12.5)
@@ -161,7 +177,11 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    shoulda-matchers (3.1.3)
+      activesupport (>= 4.0.0)
     spring (2.1.1)
+    spring-commands-rspec (1.0.4)
+      spring (>= 0.9.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
       spring (>= 1.2, < 3.0)
@@ -205,12 +225,15 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  mongoid-rspec
   mysql2 (>= 0.3.18, < 0.6.0)
   puma (~> 3.0)
   rails (~> 5.0.7, >= 5.0.7.2)
   rspec-rails
   sass-rails (~> 5.0)
+  shoulda-matchers
   spring
+  spring-commands-rspec
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
   tzinfo-data
