@@ -56,6 +56,16 @@ RSpec.describe 'Users V1 API', type: :request do
     end
 
     context 'when the request params are invalid' do
+      let(:user_params) { attributes_for(:user, email: 'invalid_email@' ) }
+
+      it 'returns status code 422' do
+        expect(response).to have_http_status(422)
+      end
+
+      it 'returns the json data for the errors' do
+        user_response = JSON.parse(response.body)
+        expect(user_response).to have_key('errors')        
+      end
 
     end
 
