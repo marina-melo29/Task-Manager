@@ -9,7 +9,7 @@ class User < ApplicationRecord
   # validates_presence_of :name
 
   def info
-    "#{email} - #{created_at}"
+    "#{email} - #{created_at} - Token: #{Devise.friendly_token}"
   end
   
 end
