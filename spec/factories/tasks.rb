@@ -1,9 +1,9 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :task do
-    title ""
-    description ""
-    done ""
-    deadline ""
-    user nil
+    title { Faker::Lorem.sentence }
+    description { Faker::Lorem.paragraph }
+    done { false }
+    deadline { Faker::Date.forward }
+    user_id { "1" }
   end
 end
