@@ -4,6 +4,6 @@ FactoryBot.define do
     description { Faker::Lorem.paragraph }
     done { false }
     deadline { Faker::Date.forward }
-    user_id { "1" }
+    user
   end
 end
