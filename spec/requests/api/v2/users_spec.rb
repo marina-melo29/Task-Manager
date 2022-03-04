@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Users V1 API', type: :request do
+RSpec.describe 'Users V2 API', type: :request do
   let!(:user) { create(:user) }
   let(:user_id) { user.id }
   let(:headers) do
@@ -21,7 +21,7 @@ RSpec.describe 'Users V1 API', type: :request do
     context 'when the user exists' do 
 
       it 'returns the user' do 
-        expect(json_body[:id]).to eq(user_id)
+        expect(json_body[:data][:id].to_i).to eq(user_id)
       end
 
       it 'returns status code 200' do
@@ -54,7 +54,7 @@ RSpec.describe 'Users V1 API', type: :request do
       end
 
       it 'returns json data for the created user' do
-        expect(json_body[:email]).to eq(user_params[:email])
+        expect(json_body[:data][:attributes][:email]).to eq(user_params[:email])
       end
     end
 
@@ -86,7 +86,7 @@ RSpec.describe 'Users V1 API', type: :request do
       end
 
       it 'returns the json data for the update user' do
-        expect(json_body[:email]).to eq(user_params[:email])
+        expect(json_body[:data][:attributes][:email]).to eq(user_params[:email])
       end
     end
 
